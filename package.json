@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-timebreak-escape-room-timer",
-  "version": "0.11.2",
+  "version": "0.11.3",
   "description": "Escape Room TIMER Function - by TIMEBREAK",
   "keywords": [
     "node-red",
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "https://github.com/cyb-de/timebreak_escaperoom_noderedtime.git"
   },
-  "homepage": "https://github.com/cyb-de/timebreak_escaperoom_noderedtimer-#readme",
+  "homepage": "https://github.com/cyb-de/timebreak_escaperoom_noderedtime#readme",
   "dependencies": {},
   "engines": {
     "node": ">=14.17.0",

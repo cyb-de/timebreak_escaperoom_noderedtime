@@ -1,2 +1,2 @@
-# timebreak_escaperoom_noderedtimer-
+# timebreak_escaperoom_noderedtimer
 TIMEBREAK Escape Room TIMER for NodeRED

@@ -1,0 +1,43 @@
+[
+  {
+    "id": "inject1",
+    "type": "inject",
+    "z": "flow1",
+    "name": "60 min starten",
+    "props": [{"p":"payload"}],
+    "payload":"START",
+    "payloadType":"str",
+    "repeat":"",
+    "once":false,
+    "onceDelay":0.1,
+    "topic":"",
+    "x":130,
+    "y":80,
+    "wires":[["timer1"]]
+  },
+  {
+    "id": "timer1",
+    "type": "timebreak-escape-room-timer",
+    "z": "flow1",
+    "name": "",
+    "duration": "60",
+    "x":350,
+    "y":80,
+    "wires":[["debug1"]]
+  },
+  {
+    "id": "debug1",
+    "type": "debug",
+    "z": "flow1",
+    "name": "Timer-Ausgabe",
+    "active":true,
+    "tosidebar":true,
+    "console":false,
+    "tostatus":false,
+    "complete":"payload",
+    "targetType":"msg",
+    "x":550,
+    "y":80,
+    "wires":[]
+  }
+]

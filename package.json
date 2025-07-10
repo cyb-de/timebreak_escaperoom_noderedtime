@@ -1,13 +1,24 @@
 {
   "name": "node-red-contrib-timebreak-escape-room-timer",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Escape Room TIMER Function - by TIMEBREAK",
-  "keywords": ["node-red","timer","escape-room","countdown","overtime","timebreak"],
+  "keywords": [
+    "node-red",
+    "timer",
+    "escape-room",
+    "countdown",
+    "overtime",
+    "timebreak"
+  ],
   "license": "MIT",
   "dependencies": {},
+  "engines": {
+    "node": ">=14.17.0",
+    "node-red": ">=3.0.0"
+  },
   "node-red": {
     "nodes": {
-      "escape-timer": "nodes/timebreak_escape-timer.js"
+      "timebreak-escape-room-timer": "nodes/timebreak_escape-timer.js"
     }
   }
 }

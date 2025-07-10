@@ -2,7 +2,7 @@ module.exports = function(RED) {
     function TbTimerNode(config) {
         RED.nodes.createNode(this, config);
         const node = this;
-        const initialSeconds = parseInt(config.duration) * 60;
+        const initialSeconds = parseInt(config.duration,10) * 60;
         let currentSeconds = initialSeconds;
         let overtime = false;
         let timer = null;
@@ -49,6 +49,7 @@ module.exports = function(RED) {
             startTimer();
         }
 
+        // start immediately
         startTimer();
 
         node.on('input', (msg) => {
@@ -63,5 +64,17 @@ module.exports = function(RED) {
 
         node.on('close', stopTimer);
     }
-    RED.nodes.registerType('tb_timer', TbTimerNode);
+
+    RED.nodes.registerType('escapetimer', TbTimerNode, {
+        category: 'function',
+        color: '#ccffcc',
+        defaults: {
+            name:     { value: "" },
+            duration: { value: "60" }
+        },
+        inputs:  1,
+        outputs: 1,
+        icon:    'font-awesome/fa-clock-o',
+        label:   function() { return this.name||'escapetimer'; }
+    });
 };

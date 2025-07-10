@@ -1,0 +1,13 @@
+{
+  "name": "node-red-contrib-escape-timer",
+  "version": "0.1.0",
+  "description": "Escape-Raum-Timer mit Countdown und Overtime - by TIMEBREAK",
+  "keywords": ["node-red","timer","escape-room"],
+  "license": "MIT",
+  "dependencies": {},
+  "node-red": {
+    "nodes": {
+      "escape-timer": "nodes/escape-timer.js"
+    }
+  }
+}

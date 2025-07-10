@@ -74,5 +74,5 @@ module.exports = function(RED) {
             stopTimer();
         });
     }
-    RED.nodes.registerType('escape-timer', EscapeTimerNode);
+    RED.nodes.registerType('timebreak_escape-timer', EscapeTimerNode);
 };

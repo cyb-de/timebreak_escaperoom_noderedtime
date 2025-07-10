@@ -1,5 +1,5 @@
 module.exports = function(RED) {
-    function EscapeTimerNode(config) {
+    function TbTimerNode(config) {
         RED.nodes.createNode(this, config);
         const node = this;
         const initialSeconds = parseInt(config.duration) * 60;
@@ -10,7 +10,7 @@ module.exports = function(RED) {
         function formatTime(sec) {
             const m = Math.floor(sec / 60);
             const s = sec % 60;
-            return `${m}:${s < 10 ? '0' + s : s}`;
+            return `${m}:${s < 10 ? '0'+s : s}`;
         }
 
         function startTimer() {
@@ -49,30 +49,19 @@ module.exports = function(RED) {
             startTimer();
         }
 
-        // sofort starten
         startTimer();
 
         node.on('input', (msg) => {
-            const cmd = (msg.payload || '').toString().trim().toUpperCase();
+            const cmd = (msg.payload||'').toString().trim().toUpperCase();
             switch (cmd) {
-                case 'PAUSE':
-                    stopTimer();
-                    break;
-                case 'START':
-                    startTimer();
-                    break;
-                case 'RESET':
-                    resetTimer();
-                    break;
-                case 'STOP':
-                    stopTimer();
-                    break;
+                case 'PAUSE': stopTimer(); break;
+                case 'START': startTimer(); break;
+                case 'RESET': resetTimer(); break;
+                case 'STOP':  stopTimer(); break;
             }
         });
 
-        node.on('close', () => {
-            stopTimer();
-        });
+        node.on('close', stopTimer);
     }
-    RED.nodes.registerType('timebreak_escape-timer', EscapeTimerNode);
+    RED.nodes.registerType('tb_timer', TbTimerNode);
 };

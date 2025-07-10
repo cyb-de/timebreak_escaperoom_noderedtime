@@ -65,7 +65,7 @@ module.exports = function(RED) {
         node.on('close', stopTimer);
     }
 
-    RED.nodes.registerType('escapetimer', TbTimerNode, {
+    RED.nodes.registerType('tbtime', TbTimerNode, {
         category: 'function',
         color: '#ccffcc',
         defaults: {
@@ -75,6 +75,6 @@ module.exports = function(RED) {
         inputs:  1,
         outputs: 1,
         icon:    'font-awesome/fa-clock-o',
-        label:   function() { return this.name || 'escapetimer'; }
+        label:   function() { return this.name || 'tbtime'; }
     });
 };

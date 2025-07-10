@@ -20,7 +20,6 @@
     "url": "https://github.com/cyb-de/timebreak_escaperoom_noderedtime.git"
   },
   "homepage": "https://github.com/cyb-de/timebreak_escaperoom_noderedtime#readme",
-  "dependencies": {},
   "engines": {
     "node": ">=14.17.0",
     "node-red": ">=3.0.0"
